@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d292e888-7a79-4633-a9bb-82f13f29d96f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../EER.mwb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/WaterBottleBeApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/bottle/Bottle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/bottle/BottleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/customer/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/decentralization/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/decentralization/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/test/java/com/example/waterbottlebe/WaterBottleBeApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/WaterBottleApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/Bottle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/BottleType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/customer/CustomerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/test/java/com/example/waterbottle/WaterBottleApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/angular.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/browserslist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/e2e/protractor.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/e2e/src/app.e2e-spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/e2e/src/app.po.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/e2e/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/karma.conf.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/environments/environment.prod.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/environments/environment.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/main.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/polyfills.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/tsconfig.app.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/tsconfig.spec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/tslint.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2IFNxvYxQOieWJrmXBG2tzDbpuv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/module1&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (book-front-end)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (book-front-end)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d292e888-7a79-4633-a9bb-82f13f29d96f" name="Changes" comment="" />
+      <created>1669773621665</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1669773621665</updated>
+      <workItem from="1669773624006" duration="1766000" />
+      <workItem from="1669822343602" duration="1542000" />
+      <workItem from="1669860930747" duration="21000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
