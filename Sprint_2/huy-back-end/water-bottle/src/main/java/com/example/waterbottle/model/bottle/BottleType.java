@@ -10,7 +10,9 @@ public class BottleType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
+
     private boolean isDelete;
 
     public BottleType() {

@@ -1,8 +1,5 @@
 package com.example.waterbottle.model.bottle;
-
-
 import com.example.waterbottle.model.customer.Customer;
-
 import javax.persistence.*;
 
 @Entity
@@ -10,33 +7,80 @@ public class Bottle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String name;
+
     private boolean isDelete;
+
     private String volume;
+
     private String color;
+
     private double price;
+
+    private String image;
+
+    private String description;
+
+    private int quantity;
+
+    @ManyToOne
+    @JoinColumn(name = "material_id", referencedColumnName = "id")
+    private Material material;
 
     @ManyToOne
     @JoinColumn(name = "bottle_type_id", referencedColumnName = "id")
     private BottleType bottleType;
 
-    @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
-    private Customer customer;
-
     public Bottle() {
     }
 
-    public Bottle(Integer id, String name, boolean isDelete, String volume, String color, double price,
-                  BottleType bottleType, Customer customer) {
+    public Bottle(Integer id, String name, boolean isDelete, String volume, String color, double price, String image,
+                  String description, int quantity, Material material, BottleType bottleType) {
         this.id = id;
         this.name = name;
         this.isDelete = isDelete;
         this.volume = volume;
         this.color = color;
         this.price = price;
+        this.image = image;
+        this.description = description;
+        this.quantity = quantity;
+        this.material = material;
         this.bottleType = bottleType;
-        this.customer = customer;
+
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public Material getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(Material material) {
+        this.material = material;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Integer getId() {
@@ -95,11 +139,4 @@ public class Bottle {
         this.bottleType = bottleType;
     }
 
-    public Customer getCustomer() {
-        return customer;
-    }
-
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
-    }
 }

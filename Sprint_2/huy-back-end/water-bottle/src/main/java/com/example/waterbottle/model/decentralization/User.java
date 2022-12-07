@@ -8,7 +8,9 @@ public class User {
 
     @Id
     private String username;
+
     private String password;
+
     private boolean isDelete;
 
     @ManyToMany(fetch = FetchType.EAGER)

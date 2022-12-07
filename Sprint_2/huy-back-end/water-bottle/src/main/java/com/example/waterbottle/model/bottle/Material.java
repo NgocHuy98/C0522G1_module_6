@@ -1,4 +1,4 @@
-package com.example.waterbottle.model.decentralization;
+package com.example.waterbottle.model.bottle;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Role {
+public class Material {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,10 +16,10 @@ public class Role {
 
     private boolean isDelete;
 
-    public Role() {
+    public Material() {
     }
 
-    public Role(Integer id, String name, boolean isDelete) {
+    public Material(Integer id, String name, boolean isDelete) {
         this.id = id;
         this.name = name;
         this.isDelete = isDelete;

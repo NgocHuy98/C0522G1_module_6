@@ -2,73 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d292e888-7a79-4633-a9bb-82f13f29d96f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../EER.mwb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/WaterBottleBeApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/bottle/Bottle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/bottle/BottleType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/customer/CustomerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/decentralization/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/decentralization/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/java/com/example/waterbottlebe/model/employee/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle-be/src/test/java/com/example/waterbottlebe/WaterBottleBeApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/WaterBottleApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/Bottle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/BottleType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/customer/CustomerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/employee/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/test/java/com/example/waterbottle/WaterBottleApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/angular.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/browserslist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/e2e/protractor.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/e2e/src/app.po.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/e2e/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/karma.conf.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/environments/environment.prod.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/environments/environment.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/main.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/polyfills.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/src/test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/tsconfig.spec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../water-bottle/tslint.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/Material.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/OrderDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/component/detail/est.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/component/home/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/component/home/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/navbar/nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/app/navbar/sagg.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/img/carousel1 (1) (1).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/img/carousel1 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/img/carousel1 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/img/in.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/img/paypal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../water-bottle/src/assets/img/zalo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/Bottle.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/Bottle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/BottleType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/bottle/BottleType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/decentralization/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/java/com/example/waterbottle/model/employee/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../huy-back-end/water-bottle/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../water-bottle/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../water-bottle/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../water-bottle/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../water-bottle/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../water-bottle/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../water-bottle/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../water-bottle/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../water-bottle/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../water-bottle/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../cinema-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../cinema-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../huy/cinema-management-v2" beforeDir="false" afterPath="$PROJECT_DIR$/../../../huy/cinema-management-v2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +55,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/module1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/MODULE 6/C0522G1_module_6/cinema-management/FE&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
@@ -141,6 +104,8 @@
       <workItem from="1669773624006" duration="1766000" />
       <workItem from="1669822343602" duration="1542000" />
       <workItem from="1669860930747" duration="21000" />
+      <workItem from="1669864471993" duration="20000" />
+      <workItem from="1670378824233" duration="5000" />
     </task>
     <servers />
   </component>

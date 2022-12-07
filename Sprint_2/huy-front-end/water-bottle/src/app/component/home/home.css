@@ -1,0 +1,98 @@
+body {
+  font-family: 'Varela Round', sans-serif;
+  /*background: rgb(123,211,232);*/
+  /*background: linear-gradient(135deg, rgba(123,211,232,1) 0%, rgba(232,123,165,1) 0%, rgba(255,50,50,1) 100%);*/
+  color: white;
+  overflow-x: hidden;
+
+}
+
+.sticky-lg-top h6 {
+  font-size: 13px;
+  font-family: "Varela Round";
+}
+
+.sticky-lg-top a {
+  font-weight: bold;
+  font-family: "Varela Round";
+}
+
+.navbar .sign-up-btn {
+  min-width: 110px;
+  max-height: 36px;
+
+}
+
+/*sửa nút login*/
+.navbar .login-btn {
+  min-width: 110px;
+  max-height: 36px;
+  color: white;
+  background: deepskyblue;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.navbar .dropdown-menu {
+  color: black;
+  font-weight: normal;
+  border-radius: 1px;
+  border-color: #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .05);
+}
+
+.navbar a, .navbar a:active {
+  color: white;
+  padding: 8px 20px;
+  background: transparent;
+  line-height: normal;
+}
+
+.navbar .navbar-form {
+  border: none;
+}
+
+.navbar .action-form {
+  width: 280px;
+  padding: 20px;
+  left: auto;
+  right: 0;
+  font-size: 14px;
+}
+
+.navbar .action-form a {
+  color: #33cabb;
+  padding: 0 ;
+  font-size: 14px;
+}
+
+.navbar .action-form .hint-text {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 13px;
+}
+
+.navbar .btn-primary, .navbar .btn-primary:active {
+  color: #fff;
+  background: #33cabb ;
+  border: none;
+
+}
+
+.navbar .btn-primary:hover, .navbar .btn-primary:focus {
+  color: #fff;
+  background: #31bfb1 !important;
+}
+
+.navbar .social-btn .btn, .navbar .social-btn .btn:hover {
+  color: #fff;
+  margin: 0;
+  padding: 0 !important;
+  font-size: 13px;
+  border: none;
+  transition: all 0.4s;
+  text-align: center;
+  line-height: 34px;
+  width: 47%;
+  text-decoration: none;
+}
