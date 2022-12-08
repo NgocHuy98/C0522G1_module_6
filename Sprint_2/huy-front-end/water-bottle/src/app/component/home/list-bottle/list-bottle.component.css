@@ -1,12 +1,10 @@
 body {
   font-family: 'Varela Round', sans-serif;
+  /*background: rgb(123,211,232);*/
+  /*background: linear-gradient(135deg, rgba(123,211,232,1) 0%, rgba(232,123,165,1) 0%, rgba(255,50,50,1) 100%);*/
   color: white;
   overflow-x: hidden;
 
-}
-
-span, h3{
-  color: black;
 }
 
 .sticky-lg-top h6 {
@@ -97,50 +95,4 @@ span, h3{
   line-height: 34px;
   width: 47%;
   text-decoration: none;
-}
-
-.btnBlue:hover {
-  background-color: #276dfd;
-  box-shadow: 0 15px 20px blue;
-  color: #fff;
-  transform: translateY(-5px);
-}
-
-.btnYellow:hover {
-  background-color: #ffc100;
-  box-shadow: 0 15px 20px yellow;
-  color: black;
-  transform: translateY(-5px);
-}
-
-.btnRed:hover {
-  background-color: #ea4646;
-  box-shadow: 0 15px 20px red;
-  color: #fff;
-  transform: translateY(-5px);
-}
-
-.btnGreen:hover {
-  background-color: #22bd22;
-  box-shadow: 0 15px 20px green;
-  color: #fff;
-  transform: translateY(-5px);
-}
-
-.button {
-  width: 80px;
-  height: 30px;
-  font-family: "Times New Roman", sans-serif;
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  font-weight: 500;
-  /*color: #000;*/
-  background-color: #fff;
-  border: none;
-  border-radius: 5px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
 }

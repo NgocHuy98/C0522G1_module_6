@@ -157,3 +157,38 @@ body {
     width: 100%;
   }
 }
+
+.product-grid .price {
+  color: var(--text-color);
+  font-size: 18px;
+  letter-spacing: 0.005em;
+  margin-bottom: 10px;
+}
+
+.product-grid .price span {
+  color: #a7a7a7;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: line-through;
+}
+
+
+.icons{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+span, h3{
+  color: black;
+}
+.booking-card1{
+  width: 250px;
+  border: solid 1px ;
+  border-radius: 4%  ;
+  background:  peru;
+
+}
+img{
+  border-radius: 4% 4% 0 0;
+}
