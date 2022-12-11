@@ -67,7 +67,7 @@
                   <span>{{item.volume}}</span>
                   <br>
                   <span>Giá: </span>
-                  <span>{{item.price}}</span>
+                  <span><b>{{item.price}} vnđ</b></span>
 
                 </div>
 
@@ -76,12 +76,10 @@
           </div>
           <div class="book-container mb-3">
             <div class="content mt-2">
-              <button class="button btnBlue mx-1" routerLink="/detail/{{item.id}}">CHI TIẾT</button>
-              <!--                <button class="button btnRed" (click)="transmissionData(item.id, item.name)"-->
-              <!--                        routerLink="/ticket/booking-ticket">ĐẶT VÉ-->
-              <!--                </button> -->
+              <button class="button btnBlue mx-3" routerLink="/detail/{{item.id}}">CHI TIẾT</button>
+<!--            -->
               <button class="button btnRed"
-                      routerLink="/ticket/booking-ticket">MUA
+                      routerLink="/booking-bottle">MUA
               </button>
             </div>
           </div>

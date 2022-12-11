@@ -13,6 +13,7 @@ import {FooterComponent} from './footer/footer.component';
   declarations: [
     AppComponent,
     FooterComponent,
+    // CartComponent,
     // NavbarComponent,
     // HomeComponent,
     // CustomerComponent,

@@ -4,6 +4,9 @@ import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
 import {SearchResult} from '../model/search-result';
 import {IBottleDto} from '../dto/i-bottle-dto';
+import {IBottle} from '../model/i-bottle';
+import {Bottle} from '../model/bottle';
+import {BottleDto} from '../dto/bottle-dto';
 
 @Injectable({
   providedIn: 'root'
@@ -21,6 +24,11 @@ export class BottleService {
     console.log(API_URL_HOME);
     return this.http.get<SearchResult<IBottleDto>>(API_URL_HOME);
   }
+
+  findById(id: number): Observable<BottleDto> {
+    return this.http.get<BottleDto>(this.API_URL + '/bottle/detail/' + id);
+  }
+
 
 
 }

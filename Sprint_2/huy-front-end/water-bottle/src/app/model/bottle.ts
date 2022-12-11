@@ -1,14 +1,15 @@
-import {IMaterial} from '../model/i-material';
-import {IBottleType} from '../model/i-bottle-type';
+import {IMaterial} from './i-material';
+import {IBottleType} from './i-bottle-type';
 
-export interface BottleDto {
+export interface Bottle {
   id?: number;
   name?: string;
   volume?: string;
+  color?: string;
   price?: number;
   image?: string;
   description?: string;
-  color?: string;
+  quantity?: number;
   material?: IMaterial;
   bottleType?: IBottleType;
 }
