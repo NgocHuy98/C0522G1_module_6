@@ -6,6 +6,10 @@ import {HomeComponent} from './home/home.component';
 import {ListBottleComponent} from './list-bottle/list-bottle.component';
 import {DetailComponent} from './detail/detail.component';
 import {CartComponent} from './cart/cart.component';
+import {LoginComponent} from '../decentralization/login/login.component';
+import {SubscribeComponent} from './subscribe/subscribe.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -13,7 +17,8 @@ import {CartComponent} from './cart/cart.component';
     HomeComponent,
     ListBottleComponent,
     DetailComponent,
-    CartComponent
+    CartComponent,
+    SubscribeComponent
   ],
   exports: [
     HomeComponent
@@ -21,7 +26,10 @@ import {CartComponent} from './cart/cart.component';
 
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class HomeModule {

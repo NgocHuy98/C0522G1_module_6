@@ -25,4 +25,13 @@ public class RoleService implements IRoleService {
 
     }
 
+    @Override
+    public void saveCreateGmail(String email) {
+        roleRepository.insertRoleGmail(email);
+    }
+
+    @Override
+    public List<Role> getRoleByUsername(String email) {
+        return roleRepository.findRoleByUsername(email);
+    }
 }

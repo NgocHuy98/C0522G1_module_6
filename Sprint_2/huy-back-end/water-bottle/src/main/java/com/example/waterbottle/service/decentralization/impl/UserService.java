@@ -1,6 +1,7 @@
 package com.example.waterbottle.service.decentralization.impl;
 
 
+import com.example.waterbottle.dto.decentralization.IUserEmailDto;
 import com.example.waterbottle.model.decentralization.User;
 import com.example.waterbottle.repository.decentralization.IUserRepository;
 import com.example.waterbottle.service.decentralization.IUserService;
@@ -41,7 +42,12 @@ public class UserService implements IUserService {
         PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         String encodedPassword = passwordEncoder.encode(newPassword);
         user.setPassword(encodedPassword);
-        userRepository.saveNewPassword(encodedPassword, user.getUsername());
+        userRepository.saveNewPassword(encodedPassword,user.getUsername());
+    }
+
+    @Override
+    public void saveCreateGmail(User user) {
+        userRepository.save(user);
     }
 
     @Override
@@ -57,5 +63,15 @@ public class UserService implements IUserService {
     @Override
     public void updateUser(User user, String username) {
         userRepository.saveUser(user, username);
+    }
+
+    @Override
+    public Optional<IUserEmailDto> findByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public Optional<IUserEmailDto> findByUsernameDto(String username) {
+        return userRepository.findByUsernameDto(username);
     }
 }

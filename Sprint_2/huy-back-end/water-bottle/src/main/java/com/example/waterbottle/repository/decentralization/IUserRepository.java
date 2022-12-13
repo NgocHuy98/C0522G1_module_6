@@ -1,6 +1,7 @@
 package com.example.waterbottle.repository.decentralization;
 
 
+import com.example.waterbottle.dto.decentralization.IUserEmailDto;
 import com.example.waterbottle.model.decentralization.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -34,4 +35,20 @@ public interface IUserRepository extends JpaRepository<User, String> {
     @Transactional
     @Query(value = " update user set password =:#{#u.password} where username =:username", nativeQuery = true)
     void saveUser(@Param("u") User user, @Param("username") String username);
+
+    @Query(value = "SELECT username, email " +
+            "from  employee where email =:email " +
+            "union all " +
+            "select  username, email " +
+            "from  customer " +
+            "where email =:email", nativeQuery = true)
+    Optional<IUserEmailDto> findByEmail(String email);
+
+    @Query(value = "SELECT username, email " +
+            "from  employee where username =:username " +
+            "union all " +
+            "select  username, email " +
+            "from  customer " +
+            "where username =:username", nativeQuery = true)
+    Optional<IUserEmailDto> findByUsernameDto(String username);
 }

@@ -2,17 +2,29 @@ package com.example.waterbottle.controller;
 
 import com.example.waterbottle.dto.bottle.IBottleDto;
 import com.example.waterbottle.dto.bottle.IBottleDtoHome;
+import com.example.waterbottle.jwt.JwtTokenUtil;
 import com.example.waterbottle.model.bottle.Bottle;
+import com.example.waterbottle.payload.request.LoginRequest;
+import com.example.waterbottle.payload.request.LoginResponse;
 import com.example.waterbottle.service.bottle.IBottleService;
+import com.example.waterbottle.service.decentralization.impl.MyUserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @RestController
 @CrossOrigin("*")
@@ -20,6 +32,12 @@ import java.util.Optional;
 public class BottleRestController {
     @Autowired
     private IBottleService iBottleService;
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
+
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
 
     @GetMapping("/list/home")
     public ResponseEntity<Page<IBottleDtoHome>> getAllBottle(@RequestParam(value = "name", defaultValue = "") String name,
@@ -39,5 +57,22 @@ public class BottleRestController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(bottle, HttpStatus.OK);
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(loginRequest.getUsername(), loginRequest.getPassword()));
+        SecurityContextHolder.getContext().setAuthentication(authentication);
+        String jwt = jwtTokenUtil.generateJwtToken(loginRequest.getUsername());
+        MyUserDetails myUserDetails = (MyUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        List<String> roles = myUserDetails.getAuthorities().stream()
+                .map(GrantedAuthority::getAuthority)
+                .collect(Collectors.toList());
+        return ResponseEntity.ok(
+                new LoginResponse(
+                        jwt,
+                        myUserDetails.getUsername(),
+                        roles));
     }
 }

@@ -1,0 +1,35 @@
+<div class="wrapper fadeInDown"
+
+>
+  <div id="formContent">
+    <div class="fadeIn first mt-2">
+      <img width="150" height="150" src="https://cf.shopee.vn/file/445bf2e7c1f280179f0139a562acaff6" id="icon" alt="User Icon"/>
+    </div>
+
+    <!-- Login Form -->
+    <form class="login100-form validate-form"  [formGroup] = "formGroup1" (ngSubmit)="onSubmit()">
+      <div>
+        <label> <span class="text-danger"
+                      *ngIf="formGroup1.controls.username.hasError('required')
+                  && formGroup1.controls.username.dirty">
+            Vui lòng nhập tài khoản !</span></label>
+        <input type="text" formControlName="username" placeholder="Nhập tài khoản" style="color:black;" >
+
+      </div>
+      <div>
+        <label> <span class="text-danger"
+                      *ngIf="formGroup1.controls.password.hasError('required')
+                  && formGroup1.controls.password.dirty">
+            Vui lòng nhập mật khẩu !</span></label>
+        <input type="password" formControlName="password" placeholder="Nhập mật khẩu" style="color:black;">
+      </div>
+      <input type="submit" class="fadeIn fourth" value="Đăng nhập ">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Quên mật khẩu</a>
+    </div>
+
+  </div>
+</div>
