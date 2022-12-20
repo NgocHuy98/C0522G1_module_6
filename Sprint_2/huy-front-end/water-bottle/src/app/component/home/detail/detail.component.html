@@ -14,17 +14,14 @@
             <h5 class="card-title card-text">{{bottles.name}}</h5>
             <div class="card-text mt-3">Loại: <b>{{bottles.bottleType}}</b></div>
             <div class="card-text">Chất liệu: <b>{{bottles.material}}</b></div>
-            <div class="card-text">Giá: <b>{{bottles.price}} vnđ</b></div>
+            <div class="card-text">Giá: <b>{{bottles.price | number}}đ</b></div>
             <div class="card-text">Thể tích: <b>{{bottles.volume}}</b></div>
             <div class="card-text">Mô tả chi tiết: <b>{{bottles.description}}</b></div>
           </div>
 
           <div class=" row mt-5">
-            <button class="btn btn-primary " style="height: 35px; width: 150px;margin-left: 4% " routerLink="/cart">THÊM
-              VÀO GIỎ
-            </button>
-            <button class="btn btn-danger" style="height: 35px; width: 150px; margin-left: 4%"
-                    routerLink="">MUA NGAY
+            <button class="btn btn-primary" (click)="addToCart()" style="height: 35px; width: 150px;margin-left: 4%">
+              Thêm vào giỏ
             </button>
           </div>
         </div>
@@ -37,6 +34,3 @@
 
   </div>
 </div>
-
-
-

@@ -1,8 +1,8 @@
-export interface IBottleHome {
+export interface ICartDto {
   id?: number;
+  quantity?: number;
   name?: string;
-  volume?: string;
-  price?: number;
   image?: string;
+  price?: number;
   discountMoney?: number;
 }

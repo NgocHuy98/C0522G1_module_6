@@ -52,7 +52,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 //                        "/api/customer/**",
 //                        "/api/user/find/{username}",
 //                        "/api/promotion/**",
-                        "/api/bottle/**"
+                        "/api/bottle/**",
+                        "/api/cart/**"
+
 //                        "/api/ticket/**",
 //                        "/api/room/**",
 //                        "/api/showTime/**"

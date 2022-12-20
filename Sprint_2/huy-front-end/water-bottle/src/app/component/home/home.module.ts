@@ -10,6 +10,7 @@ import {LoginComponent} from '../decentralization/login/login.component';
 import {SubscribeComponent} from './subscribe/subscribe.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -24,13 +25,14 @@ import {HttpClientModule} from '@angular/common/http';
     HomeComponent
   ],
 
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    ReactiveFormsModule,
-    FormsModule,
-    HttpClientModule
-  ]
+    imports: [
+        CommonModule,
+        HomeRoutingModule,
+        ReactiveFormsModule,
+        FormsModule,
+        HttpClientModule,
+        NgbPaginationModule
+    ]
 })
 export class HomeModule {
 }

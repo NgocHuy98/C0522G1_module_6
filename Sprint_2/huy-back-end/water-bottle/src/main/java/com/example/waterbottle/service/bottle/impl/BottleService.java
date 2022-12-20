@@ -18,8 +18,12 @@ public class BottleService implements IBottleService {
     private IBottleRepository iBottleRepository;
 
     @Override
-    public Page<IBottleDtoHome> findAlBottle(String name, Pageable pageable) {
+    public Page<IBottleDtoHome> findAllBottle(String name,  Pageable pageable) {
         return iBottleRepository.findAllBottle(name, pageable);
+    }
+    @Override
+    public Page<IBottleDtoHome> findAllBottleByPrice(String name,int startPrice,int endPrice,  Pageable pageable) {
+        return iBottleRepository.findAllBottleByPrice(name, startPrice, endPrice, pageable);
     }
 
     @Override

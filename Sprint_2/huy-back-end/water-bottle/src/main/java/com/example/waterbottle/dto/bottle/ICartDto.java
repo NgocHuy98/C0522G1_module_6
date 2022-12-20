@@ -1,7 +1,10 @@
 package com.example.waterbottle.dto.bottle;
 
-public interface IBottleDtoHome {
+public interface ICartDto {
+
     int getId();
+
+    Integer getQuantity();
 
     String getName();
 
@@ -9,7 +12,6 @@ public interface IBottleDtoHome {
 
     double getPrice();
 
-    String getVolume();
+    double getDiscountMoney();
 
-    int getDiscountMoney();
 }

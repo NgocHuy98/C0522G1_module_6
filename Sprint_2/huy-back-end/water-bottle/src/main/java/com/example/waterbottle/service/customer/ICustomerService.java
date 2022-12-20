@@ -29,11 +29,13 @@ public interface ICustomerService {
     void updatePassword(User user, String newPassword);
 
 
+
     Customer findById(Integer id);
 
     List<Integer> findAllCusId();
 
     Customer findByUsername(String username);
 
+    Customer findCustomerByUsernames(String username);
 
 }

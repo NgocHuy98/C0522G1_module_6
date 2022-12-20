@@ -19,7 +19,6 @@ import java.util.Optional;
 @Service
 public class CustomerService implements ICustomerService {
 
-
     @Autowired
     private ICustomerRepository customerRepository;
 
@@ -75,7 +74,6 @@ public class CustomerService implements ICustomerService {
 
 
 
-
     @Override
     public Customer findById(Integer id) {
         return customerRepository.findById(id).orElse(null);
@@ -90,4 +88,10 @@ public class CustomerService implements ICustomerService {
     public Customer findByUsername(String username) {
         return customerRepository.findByUsername(username);
     }
+
+    @Override
+    public Customer findCustomerByUsernames(String username) {
+        return customerRepository.findCustomerByUsernames(username);
+    }
+
 }

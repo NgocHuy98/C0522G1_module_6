@@ -9,7 +9,13 @@ import org.springframework.data.domain.Pageable;
 import java.util.Optional;
 
 public interface IBottleService {
-    Page<IBottleDtoHome> findAlBottle(String name, Pageable pageable);
+
+
+    Page<IBottleDtoHome> findAllBottle(String name, Pageable pageable);
+
+    Page<IBottleDtoHome> findAllBottleByPrice(String name, int startPrice, int endPrice, Pageable pageable);
 
     Optional<IBottleDto> bottleDetail(Integer id);
+
+
 }

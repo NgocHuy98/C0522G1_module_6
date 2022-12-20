@@ -19,7 +19,7 @@ const googleLoginOptions = {
 @NgModule({
   declarations: [
     AppComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -93,4 +93,7 @@ public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
     @Query(value = "select * from customer where username = :username and is_delete = 0;", nativeQuery = true)
     Customer findByUsername(@Param("username") String username);
 
+    @Query(value = "select * from customer where is_delete = 0 and username = :username", nativeQuery = true)
+    Customer findCustomerByUsernames(@Param("username") String username);
+
 }

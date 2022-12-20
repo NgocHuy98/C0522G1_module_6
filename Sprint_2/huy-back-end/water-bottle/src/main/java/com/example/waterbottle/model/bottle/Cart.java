@@ -5,7 +5,7 @@ import com.example.waterbottle.model.customer.Customer;
 import javax.persistence.*;
 
 @Entity
-public class OrderDetail {
+public class Cart {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -25,11 +25,11 @@ public class OrderDetail {
     private boolean isDelete;
 
 
-    public OrderDetail() {
+    public Cart() {
     }
 
-    public OrderDetail(Integer id, int quantity, String dateTime, Bottle bottle, Customer customer,
-                       boolean isDelete) {
+    public Cart(Integer id, int quantity, String dateTime, Bottle bottle, Customer customer,
+                boolean isDelete) {
         this.id = id;
         this.quantity = quantity;
         this.dateTime = dateTime;

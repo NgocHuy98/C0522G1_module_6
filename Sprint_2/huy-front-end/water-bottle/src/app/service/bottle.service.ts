@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../environments/environment';
@@ -19,16 +19,28 @@ export class BottleService {
     this.API_URL = environment.api_url;
   }
 
-  findAllListBottle(name: string, size: number): Observable<SearchResult<IBottleDto>> {
-    const API_URL_HOME = this.API_URL + '/bottle/list/home?name=' + name + '&size=' + size;
+  findAllListBottle(name: string, startPrice: number, endPrice: number, size: number): Observable<SearchResult<IBottleDto>> {
+    const API_URL_HOME = this.API_URL + '/bottle/list/home?name=' + name +
+      '&startPrice=' + startPrice + '&endPrice=' + endPrice + '&size=' + size;
     console.log(API_URL_HOME);
     return this.http.get<SearchResult<IBottleDto>>(API_URL_HOME);
   }
+
+  // findAllListBottle(name: string, size: number): Observable<SearchResult<IBottleDto>> {
+  //
+  //   const API_URL_HOME = this.API_URL + '/bottle/list/home?name=' + name +
+  //     '&size=' + size;
+  //   return this.http.get<SearchResult<IBottleDto>>(API_URL_HOME);
+  // }
 
   findById(id: number): Observable<BottleDto> {
     return this.http.get<BottleDto>(this.API_URL + '/bottle/detail/' + id);
   }
 
+  addToCart(quantity: number, customerId: number, bottleId: number): Observable<void> {
+    console.log(this.API_URL + '/cart/add/' + quantity + '&' + customerId + '&' + bottleId);
+    return this.http.get<void>(this.API_URL + '/cart/add/' + quantity + '&' + customerId + '&' + bottleId);
+  }
 
 
 }

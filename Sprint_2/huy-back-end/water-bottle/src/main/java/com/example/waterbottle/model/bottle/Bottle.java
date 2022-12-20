@@ -1,5 +1,7 @@
 package com.example.waterbottle.model.bottle;
-import com.example.waterbottle.model.customer.Customer;
+
+import com.example.waterbottle.model.Promotion.Promotion;
+
 import javax.persistence.*;
 
 @Entity
@@ -32,11 +34,16 @@ public class Bottle {
     @JoinColumn(name = "bottle_type_id", referencedColumnName = "id")
     private BottleType bottleType;
 
+    @ManyToOne
+    @JoinColumn(name = "promotion_id", referencedColumnName = "id")
+    private Promotion promotion;
+
     public Bottle() {
     }
 
-    public Bottle(Integer id, String name, boolean isDelete, String volume, String color, double price, String image,
-                  String description, int quantity, Material material, BottleType bottleType) {
+    public Bottle(Integer id, String name, boolean isDelete, String volume, String color, double price,
+                  String image, String description, int quantity, Material material, BottleType bottleType,
+                  Promotion promotion) {
         this.id = id;
         this.name = name;
         this.isDelete = isDelete;
@@ -48,7 +55,15 @@ public class Bottle {
         this.quantity = quantity;
         this.material = material;
         this.bottleType = bottleType;
+        this.promotion = promotion;
+    }
 
+    public Promotion getPromotion() {
+        return promotion;
+    }
+
+    public void setPromotion(Promotion promotion) {
+        this.promotion = promotion;
     }
 
     public String getImage() {
