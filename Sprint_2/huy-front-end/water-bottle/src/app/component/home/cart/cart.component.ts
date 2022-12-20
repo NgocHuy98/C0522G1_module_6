@@ -45,15 +45,19 @@ export class CartComponent implements OnInit {
 
   getCustomer(): void {
     this.customerService.findCustomerByUsername().subscribe(customer => {
-      console.log(customer);
+      // console.log(customer);
       if (customer != null) {
+        this.cartService.getTotalPay(customer.id).subscribe(value1 => {
+          this.totalPrice = value1;
+          // console.log(this.totalPrice);
+        });
         this.cartService.findCartByUser(customer.id).subscribe(value => {
-          console.log(value);
+          // console.log(value);
           this.cart = value;
-          for (const item of value) {
-            this.totalPrice += item.discountMoney * item.quantity;
-            // this.finalPrice += item.discountMoney * item.quantity;
-          }
+          // for (const item of value) {
+          //   this.totalPrice += item.discountMoney * item.quantity;
+          //   // this.finalPrice += item.discountMoney * item.quantity;
+          // }
         });
       }
     });
@@ -61,8 +65,8 @@ export class CartComponent implements OnInit {
 
   increase(id: number): void {
     this.cartService.increase(id).subscribe(value => {
-      // this.ngOnInit();
-      window.location.reload();
+      this.ngOnInit();
+      // window.location.reload();
     }, error => {
       console.log(error);
     });
@@ -70,8 +74,8 @@ export class CartComponent implements OnInit {
 
   decrease(id: number): void {
     this.cartService.decrease(id).subscribe(value => {
-      // this.ngOnInit();
-      window.location.reload();
+      this.ngOnInit();
+      // window.location.reload();
     }, error => {
       console.log(error);
     });

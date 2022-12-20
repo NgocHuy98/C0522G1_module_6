@@ -36,4 +36,8 @@ export class CartService {
   paid(id: number): Observable<void> {
     return this.http.get<void>(this.API_URL + '/cart/paid/' + id);
   }
+
+  getTotalPay(id: number): Observable<number> {
+    return this.http.get<number>(this.API_URL + '/cart/total-pay/' + id);
+  }
 }

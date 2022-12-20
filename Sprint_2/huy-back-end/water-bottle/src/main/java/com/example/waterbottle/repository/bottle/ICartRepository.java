@@ -27,14 +27,25 @@ public interface ICartRepository extends JpaRepository<Cart, Integer> {
                          @Param("customerId") Integer customerId);
 
     @Query(value = "select cart.id as id, cart.quantity as quantity, bottle.image as image, bottle.name as name," +
-            " bottle.price as price, bottle.price*(100 - ifnull(p.discount, 0))/100 as discountMoney " +
-            " from cart" +
+            " bottle.price as price, bottle.price*(100 - promotion.discount)/100 as discountMoney " +
+            " from cart " +
             " join bottle on cart.bottle_id = bottle.id " +
-            " join promotion p on bottle.promotion_id = p.id " +
+            " join promotion on bottle.promotion_id = promotion.id " +
             " join customer on customer.id = cart.customer_id  " +
             " where cart.is_delete = 0 and cart.quantity>0 and cart.customer_id = :customerId",
             nativeQuery = true)
     List<ICartDto> findCartByUser(@Param("customerId") Integer id);
+
+//    @Query(value = "select cart.id as id, cart.quantity as quantity, bottle.image as image, bottle.name as name," +
+//            " bottle.price as price, bottle.price*(100 - promotion.discount)/100 as discountMoney," +
+//            " sum((bottle.price*(100 - promotion.discount)/100)*cart.quantity) as totalPay " +
+//            " from cart " +
+//            " join bottle on cart.bottle_id = bottle.id " +
+//            " join promotion on bottle.promotion_id = promotion.id " +
+//            " join customer on customer.id = cart.customer_id  " +
+//            " where cart.is_delete = 0 and cart.quantity>0 and cart.customer_id = :customerId",
+//            nativeQuery = true)
+//    List<ICartDto> findCartByUser(@Param("customerId") Integer id);
 
 
     @Modifying
@@ -61,5 +72,11 @@ public interface ICartRepository extends JpaRepository<Cart, Integer> {
     @Query(value = "update cart set is_delete = 1 where id = :id ", nativeQuery = true)
     void deleteCart(@Param("id") Integer id);
 
-
+@Query(value = "select sum((bottle.price*(100 - promotion.discount)/100)*cart.quantity) as total_pay " +
+        " from cart " +
+        " join bottle on cart.bottle_id = bottle.id " +
+        " join promotion on bottle.promotion_id = promotion.id " +
+        " join customer on customer.id = cart.customer_id " +
+        " where cart.is_delete = 0 and customer_id = :id",nativeQuery = true)
+    Integer getTotalPay(@Param("id") Integer id);
 }

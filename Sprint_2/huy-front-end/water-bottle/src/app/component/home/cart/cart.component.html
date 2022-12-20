@@ -48,8 +48,10 @@
       </td>
       <td data-th="Subtotal" class="text-center">{{item.discountMoney * item.quantity| number}}đ</td>
       <td class="actions" data-th="" style="text-align: center">
-        <button class="btn btn-dark btn-sm mx-1 "  (click)="deleteCart(item.id)">Hủy</button>
+        <button class="btn btn-dark btn-sm mx-1 " (click)="deleteCart(item.id)">Hủy</button>
       </td>
+      <!--      <td *ngFor="let item of cart" class="hidden-xs text-center"><strong> {{item.totalPay|number}}đ</strong></td>-->
+
     </tr>
 
     </tbody>

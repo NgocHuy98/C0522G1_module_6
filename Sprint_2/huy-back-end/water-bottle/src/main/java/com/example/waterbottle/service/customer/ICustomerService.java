@@ -36,6 +36,8 @@ public interface ICustomerService {
 
     Customer findByUsername(String username);
 
+
+//Đang dùng
     Customer findCustomerByUsernames(String username);
 
 }

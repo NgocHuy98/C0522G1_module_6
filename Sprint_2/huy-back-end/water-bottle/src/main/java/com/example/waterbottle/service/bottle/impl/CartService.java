@@ -52,4 +52,9 @@ public class CartService implements ICartService {
     public void deleteCart(Integer id) {
         iCartRepository.deleteCart(id);
     }
+
+    @Override
+    public Integer getTotalPay(Integer id) {
+        return iCartRepository.getTotalPay(id);
+    }
 }

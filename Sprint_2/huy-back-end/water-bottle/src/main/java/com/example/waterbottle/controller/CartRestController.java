@@ -60,4 +60,10 @@ public class CartRestController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @GetMapping("/total-pay/{id}")
+    public ResponseEntity<Integer> getTotalPay(@PathVariable("id") Integer id) {
+        Integer totalPay = iCartService.getTotalPay(id);
+        return new ResponseEntity<>(totalPay, HttpStatus.OK);
+    }
+
 }
