@@ -1,6 +1,7 @@
 package com.example.waterbottle.service.bottle.impl;
 
 import com.example.waterbottle.dto.bottle.ICartDto;
+import com.example.waterbottle.dto.bottle.IToatalPayDto;
 import com.example.waterbottle.model.bottle.Cart;
 import com.example.waterbottle.repository.bottle.ICartRepository;
 import com.example.waterbottle.service.bottle.ICartService;
@@ -54,7 +55,7 @@ public class CartService implements ICartService {
     }
 
     @Override
-    public Integer getTotalPay(Integer id) {
+    public IToatalPayDto getTotalPay(Integer id) {
         return iCartRepository.getTotalPay(id);
     }
 }

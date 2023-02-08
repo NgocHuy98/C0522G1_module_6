@@ -10,6 +10,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FooterComponent} from './footer/footer.component';
 import {DecentralizationModule} from './component/decentralization/decentralization.module';
 import {GoogleLoginProvider, SocialAuthServiceConfig, SocialLoginModule} from 'angularx-social-login';
+import {AngularFireModule} from '@angular/fire';
+import {environment} from '../environments/environment';
 
 const googleLoginOptions = {
   scope: 'profile email',
@@ -31,6 +33,7 @@ const googleLoginOptions = {
     NgbModule,
     DecentralizationModule,
     SocialLoginModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
 
   ],
   providers: [

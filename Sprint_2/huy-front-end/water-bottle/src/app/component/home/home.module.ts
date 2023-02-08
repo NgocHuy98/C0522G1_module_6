@@ -6,11 +6,11 @@ import {HomeComponent} from './home/home.component';
 import {ListBottleComponent} from './list-bottle/list-bottle.component';
 import {DetailComponent} from './detail/detail.component';
 import {CartComponent} from './cart/cart.component';
-import {LoginComponent} from '../decentralization/login/login.component';
 import {SubscribeComponent} from './subscribe/subscribe.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
+import {EditBottleComponent} from './edit-bottle/edit-bottle.component';
 
 
 @NgModule({
@@ -19,7 +19,9 @@ import {NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
     ListBottleComponent,
     DetailComponent,
     CartComponent,
-    SubscribeComponent
+    EditBottleComponent,
+    SubscribeComponent,
+    EditBottleComponent
   ],
   exports: [
     HomeComponent

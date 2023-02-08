@@ -18,4 +18,9 @@ public interface IBottleService {
     Optional<IBottleDto> bottleDetail(Integer id);
 
 
+    Optional<Bottle> findBottleById(Integer id);
+
+    void saveBottle(Bottle bottle);
+
+    void deleteBottle(Integer id);
 }

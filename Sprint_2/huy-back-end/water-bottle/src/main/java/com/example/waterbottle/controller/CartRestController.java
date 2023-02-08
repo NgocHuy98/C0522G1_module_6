@@ -1,14 +1,18 @@
 package com.example.waterbottle.controller;
 
 import com.example.waterbottle.dto.bottle.ICartDto;
+import com.example.waterbottle.dto.bottle.IToatalPayDto;
 import com.example.waterbottle.model.bottle.Cart;
+import com.example.waterbottle.model.customer.Customer;
 import com.example.waterbottle.service.bottle.ICartService;
+import com.example.waterbottle.service.customer.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -19,20 +23,25 @@ public class CartRestController {
     @Autowired
     private ICartService iCartService;
 
-    @GetMapping("/{id}")
-    public ResponseEntity<List<ICartDto>> showCartByUser(@PathVariable("id") Integer id) {
-        List<ICartDto> cart = iCartService.findCartByUser(id);
-        if(cart.isEmpty()){
+    @Autowired
+    private ICustomerService iCustomerService;
+
+    @GetMapping("/{username}")
+    public ResponseEntity<List<ICartDto>> showCartByUser(@PathVariable("username") String username) {
+        Customer customer = iCustomerService.findCustomerByUsernames(username);
+        List<ICartDto> cart = iCartService.findCartByUser(customer.getId());
+        if (cart.isEmpty()) {
             return new ResponseEntity<>(cart, HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(cart, HttpStatus.OK);
     }
 
-    @GetMapping("/add/{quantity}&{customerId}&{bottleId}")
+    @GetMapping("/add/{quantity}&{username}&{bottleId}")
     public ResponseEntity<Cart> addBottleToCart(@PathVariable("quantity") Integer quantity,
-                                                @PathVariable("customerId") Integer customerId,
+                                                @PathVariable("username") String username,
                                                 @PathVariable("bottleId") Integer bottleId) {
-        iCartService.addBottleToCart(quantity, customerId, bottleId);
+        Customer customer = iCustomerService.findCustomerByUsernames(username);
+        iCartService.addBottleToCart(quantity, customer.getId(), bottleId);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -48,9 +57,10 @@ public class CartRestController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/paid/{id}")
-    public ResponseEntity<Cart> payment(@PathVariable("id") Integer id) {
-        iCartService.paid(id);
+    @GetMapping("/paid/{username}")
+    public ResponseEntity<Cart> payment(@PathVariable("username") String username) {
+        Customer customer = iCustomerService.findCustomerByUsernames(username);
+        iCartService.paid(customer.getId());
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
@@ -60,9 +70,10 @@ public class CartRestController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
-    @GetMapping("/total-pay/{id}")
-    public ResponseEntity<Integer> getTotalPay(@PathVariable("id") Integer id) {
-        Integer totalPay = iCartService.getTotalPay(id);
+    @GetMapping("/total-pay/{username}")
+    public ResponseEntity<IToatalPayDto> getTotalPay(@PathVariable("username") String username) {
+        Customer customer = iCustomerService.findCustomerByUsernames(username);
+        IToatalPayDto totalPay = iCartService.getTotalPay(customer.getId());
         return new ResponseEntity<>(totalPay, HttpStatus.OK);
     }
 

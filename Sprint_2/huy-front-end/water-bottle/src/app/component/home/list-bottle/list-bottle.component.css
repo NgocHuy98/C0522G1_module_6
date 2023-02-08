@@ -118,3 +118,7 @@ body {
   border-radius: 5px;
   margin-left: 1%;
 }
+
+.modal-title{
+  color: #0d0d0d;
+}

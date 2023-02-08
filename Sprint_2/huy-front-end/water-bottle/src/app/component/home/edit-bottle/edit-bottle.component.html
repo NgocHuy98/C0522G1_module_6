@@ -1,0 +1,125 @@
+
+  <div class="text-center mt-3" id="head">
+    <h2 class="m-0 text-light pt-2 ">Chỉnh sửa sản phẩm</h2></div>
+  <form [formGroup]="bottleFormGroup" (ngSubmit)="editBottle()" *ngIf="bottleFormGroup">
+    <div class="container">
+      <div class="row">
+        <label for="name"><b>Tên sản phẩm</b><span>*</span>
+        </label>
+        <span
+          *ngIf="bottleFormGroup.controls.name.hasError('required') &&
+                     ( bottleFormGroup.controls.name.touched  || submitCheck)" class="mx-1">
+      Vui lòng nhập tên!
+      </span>
+        <input type="text" required id="name" formControlName="name">
+      </div>
+
+      <div class="row">
+        <label for="code"><b>Thể tích</b><span>*</span></label>
+        <span *ngIf="bottleFormGroup.controls.volume.hasError('required') &&
+     ( bottleFormGroup.controls.idCard.touched  || submitCheck)" class="mx-1">
+       Vui lòng nhập thể tích!</span>
+
+        <input type="text" required id="code" formControlName="volume">
+      </div>
+
+      <div class="row">
+        <label for="email"><b>Màu sắc</b><span>*</span>
+        </label>
+
+        <span *ngIf="bottleFormGroup.controls.color.hasError('required') &&
+                      (bottleFormGroup.controls.color.touched  || submitCheck)" class="mx-1">
+      Vui lòng nhập màu sắc!</span>
+        <input type="email" required id="email" formControlName="color">
+      </div>
+
+      <div class="row">
+        <label for="phoneNumber"><b>Giá</b><span>*</span>
+        </label>
+
+        <span *ngIf="bottleFormGroup.controls.price.hasError('required') &&
+                      (bottleFormGroup.controls.price.touched || submitCheck)" class="mx-1">
+      Vui lòng nhập giá!</span>
+        <input type="text" required id="phoneNumber" formControlName="price">
+      </div>
+
+      <div class="row">
+        <label for="address"><b>Địa chỉ</b><span>*</span></label>
+        <span *ngIf="bottleFormGroup.controls.description.hasError('required') &&
+                      (bottleFormGroup.controls.description.touched || submitCheck)" class="mx-1">
+    Vui lòng nhập mô tả!</span>
+
+
+        <input type="text" required id="address" formControlName="description">
+      </div>
+
+      <div class="row">
+        <label for="birthday"><b>Số lượng</b><span>*</span></label>
+
+        <span *ngIf="bottleFormGroup.controls.quantity.hasError('required') &&
+                      (bottleFormGroup.controls.quantity.touched || submitCheck)" class="mx-1">
+      Vui lòng nhập số lượng!</span>
+
+        <input type="number" required id="birthday" formControlName="quantity">
+      </div>
+
+      <div class="row">
+        <label for="bottleType"><b>Loại bình</b><span>*</span></label>
+
+        <select [compareWith]="compareWithId" formControlName="bottleType" id="bottleType" class="form-select">
+          <option value="null">Chọn loại bình</option>
+          <option *ngFor="let bottleType of bottleTypes" [ngValue]="bottleType">{{bottleType.name}}</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="material"><b>Chất liệu</b><span>*</span></label>
+
+        <select [compareWith]="compareWithId" formControlName="material" id="material" class="form-select">
+          <option value="null">Chọn loại bình</option>
+          <option *ngFor="let material of materials" [ngValue]="material">{{material.name}}</option>
+        </select>
+      </div>
+
+
+      <div class="row mt-3">
+        <label for="img"><b>Hình ảnh</b><span>*</span></label>
+        <span *ngIf="bottleFormGroup.controls.image.hasError('required') &&
+                     bottleFormGroup.controls.image.touched" class="mx-1">
+      Vui lòng chọn ảnh!</span>
+
+        <!--      <span *ngIf="employeeFormGroup.controls.image.hasError('required') &&-->
+        <!--                     ( employeeFormGroup.controls.image.dirty || submitCheck)" class="mx-1">-->
+        <!--      Chọn ảnh!</span>-->
+
+
+        <div id="img" class="col-lg-6 upload-wrap mt-4">
+          <input id="file-uploader" class="font-control-file" type="file" accept="image/*"
+                 (change)="showPreview($event)"
+                 [src]="imgUrl">
+
+          <!--        <p class="pFile mt-1">Định dạng cho jpg, png</p>-->
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 mt-2">
+          <img [src]="imgUrl" id="img-grid" class="upload preview 01 imgEmployee">
+        </div>
+        <div class="col-2"></div>
+      </div>
+
+      <div class="clearfix row mt-3 ">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6 ">
+          <button type="submit" class="btn btn-success mb-2" style="width: 90px; margin-left: 30px">Sửa</button>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+          <button type="button" class="btn btn-warning mb-2" style="width: 90px; margin-left: 30px" routerLink="">
+            Quay lại
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </form>

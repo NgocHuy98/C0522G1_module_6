@@ -1,12 +1,15 @@
 package com.example.waterbottle.controller;
 
+import com.example.waterbottle.dto.bottle.BottleDto;
 import com.example.waterbottle.dto.bottle.IBottleDto;
 import com.example.waterbottle.dto.bottle.IBottleDtoHome;
 import com.example.waterbottle.jwt.JwtTokenUtil;
+import com.example.waterbottle.model.bottle.Bottle;
 import com.example.waterbottle.payload.request.LoginRequest;
 import com.example.waterbottle.payload.request.LoginResponse;
 import com.example.waterbottle.service.bottle.IBottleService;
 import com.example.waterbottle.service.decentralization.impl.MyUserDetails;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -19,6 +22,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -83,5 +87,42 @@ public class BottleRestController {
                         jwt,
                         myUserDetails.getUsername(),
                         roles));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<BottleDto> getBottleDto(@PathVariable Integer id) {
+        Optional<Bottle> bottle = iBottleService.findBottleById(id);
+        if (!bottle.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        BottleDto bottleDto = new BottleDto();
+        BeanUtils.copyProperties(bottle.get(), bottleDto);
+        return new ResponseEntity<>(bottleDto, HttpStatus.OK);
+    }
+
+    @PatchMapping("/edit/{id}")
+    public ResponseEntity<?> editBottle(@RequestBody BottleDto bottleDto,
+                                        @PathVariable Integer id,
+                                        BindingResult bindingResult) {
+
+        if (bindingResult.hasErrors()) {
+            return new ResponseEntity<>(bindingResult.getFieldErrors(),
+                    HttpStatus.BAD_REQUEST);
+        }
+
+        Optional<Bottle> bottle = iBottleService.findBottleById(id);
+        if (bottle.isPresent()) {
+            BeanUtils.copyProperties(bottleDto, bottle.get());
+            iBottleService.saveBottle(bottle.get());
+            return new ResponseEntity<>(bottle.get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<Void> deleteBottle(@PathVariable Integer id){
+        this.iBottleService.deleteBottle(id);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

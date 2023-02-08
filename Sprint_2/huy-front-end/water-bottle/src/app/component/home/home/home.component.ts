@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import Swal from 'sweetalert2';
 import {TokenStorageService} from '../../../service/token-storage.service';
 import {BottleService} from '../../../service/bottle.service';
 import {Router} from '@angular/router';
 import {HomeService} from '../../../service/home.service';
+import {CartService} from '../../../service/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -15,13 +16,14 @@ export class HomeComponent implements OnInit {
   roles: string[] = [];
   isCustomer = false;
   isAdmin = false;
-
-
+  totalProduct: number;
+  existBottle: boolean;
 
   constructor(private router: Router,
               private homeService: HomeService,
               private tokenService: TokenStorageService,
-              private movieService: BottleService
+              private movieService: BottleService,
+              private cartService: CartService
   ) {
   }
 
@@ -29,6 +31,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.username = '';
     this.showUsername();
+    this.getTotalPay();
+    // this.cartService.getTotalPay(this.username);
     window.scroll({
       top: 0,
       left: 0,
@@ -56,6 +60,19 @@ export class HomeComponent implements OnInit {
     this.username = '';
     this.isCustomer = false;
     this.isAdmin = false;
+  }
+
+  getTotalPay(): void {
+    this.username = this.tokenService.getUser().username;
+    this.cartService.getTotalPay(this.username).subscribe(value => {
+      if (value.totalProduct <= 0) {
+        this.existBottle = false;
+        this.totalProduct = value.totalProduct;
+      } else {
+        this.existBottle = true;
+        this.totalProduct = value.totalProduct;
+      }
+    });
   }
 
 }

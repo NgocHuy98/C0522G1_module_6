@@ -1,5 +1,17 @@
 <div class="container">
-  <table id="cart" class="table table-hover table-condensed">
+ <div *ngIf="!checkList">
+   <h3  class="text-center mt-5 mb-5">
+     Không có sản phẩm nào!!!
+   </h3>
+   <div>
+    <h4 class="mt-5 text-center" style="color: black"> Vui lòng quay lai trang chủ để đặt hàng!</h4>
+   </div>
+   <div>
+     <button routerLink="" class="btn btn-warning mt-2 mb-5">Quay lại trang chủ</button>
+   </div>
+ </div>
+
+  <table  id="cart" class="table table-hover table-condensed"  *ngIf="checkList">
     <thead>
     <tr>
       <th style="width:40%">Sản phẩm</th>
@@ -46,7 +58,7 @@
 
 
       </td>
-      <td data-th="Subtotal" class="text-center">{{item.discountMoney * item.quantity| number}}đ</td>
+      <td data-th="Subtotal" class="text-center">{{item.discountMoney * item.quantity| number}}<u>đ</u></td>
       <td class="actions" data-th="" style="text-align: center">
         <button class="btn btn-dark btn-sm mx-1 " (click)="deleteCart(item.id)">Hủy</button>
       </td>
@@ -64,7 +76,7 @@
       <!--      <td>Tổng số loại sản phẩm: {{totalBottle}}</td>-->
       <td></td>
       <td class="hidden-xs" style="text-align: right">Tổng thanh toán:</td>
-      <td class="hidden-xs text-center"><strong> {{totalPrice|number}}đ</strong></td>
+      <td class="hidden-xs text-center"><strong> {{totalPay|number}}<u>đ</u></strong></td>
       <!--      <td><a href="#" class="btn btn-danger " style="width: 110px">Mua ngay <i class="fa fa-angle-right"></i></a></td>-->
       <td>
         <button *ngIf=" action" class="btn btn-danger" (click)="payment() ">Mua</button>

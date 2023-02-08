@@ -5,5 +5,6 @@ export interface ICartDto {
   image?: string;
   price?: number;
   discountMoney?: number;
-  // totalPay?: number;
+  totalPay?: number;
+  totalProduct?: number;
 }

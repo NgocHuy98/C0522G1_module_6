@@ -30,4 +30,19 @@ public class BottleService implements IBottleService {
     public Optional<IBottleDto> bottleDetail(Integer id) {
         return iBottleRepository.bottleDetail(id);
     }
+
+    @Override
+    public Optional<Bottle> findBottleById(Integer id) {
+        return iBottleRepository.findById(id);
+    }
+
+    @Override
+    public void saveBottle(Bottle bottle) {
+        iBottleRepository.save(bottle);
+    }
+
+    @Override
+    public void deleteBottle(Integer id) {
+        iBottleRepository.deleteBottle(id);
+    }
 }

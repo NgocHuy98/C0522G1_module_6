@@ -8,6 +8,7 @@ import {ICustomer} from '../../../model/i-customer';
 import {IBottle} from '../../../model/i-bottle';
 import {CustomerService} from '../../../service/customer.service';
 import Swal from 'sweetalert2';
+import {TokenStorageService} from '../../../service/token-storage.service';
 
 @Component({
   selector: 'app-detail',
@@ -21,9 +22,11 @@ export class DetailComponent implements OnInit {
   quantityCart = 1;
   customerId1: number;
   bottleId: number;
+  username: string;
 
   constructor(private bottleService: BottleService,
               private activatedRoute: ActivatedRoute,
+              private tokenStorageService: TokenStorageService,
               private cartService: CartService,
               private customerService: CustomerService,
               private domSanitizer: DomSanitizer,
@@ -44,15 +47,11 @@ export class DetailComponent implements OnInit {
   }
 
   getCustomer(): void {
-    this.customerService.findCustomerByUsername().subscribe(customer => {
-      console.log(customer);
-      this.customerId1 = customer.id;
-
-    });
+    this.username = this.tokenStorageService.getUser().username;
   }
 
   addToCart(): void {
-    this.bottleService.addToCart(this.quantityCart, this.customerId1, this.bottleId).subscribe(() => {
+    this.bottleService.addToCart(this.quantityCart, this.username, this.bottleId).subscribe(() => {
       const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',

@@ -16,8 +16,8 @@ export class CartService {
     this.API_URL = environment.api_url;
   }
 
-  findCartByUser(id: number): Observable<ICartDto[]> {
-    return this.http.get<ICartDto[]>(this.API_URL + '/cart/' + id);
+  findCartByUser(username: string): Observable<ICartDto[]> {
+    return this.http.get<ICartDto[]>(this.API_URL + '/cart/' + username);
   }
 
   increase(id: number): Observable<void> {
@@ -33,11 +33,11 @@ export class CartService {
     return this.http.get<void>(this.API_URL + '/cart/delete/' + id);
   }
 
-  paid(id: number): Observable<void> {
-    return this.http.get<void>(this.API_URL + '/cart/paid/' + id);
+  paid(username: string): Observable<void> {
+    return this.http.get<void>(this.API_URL + '/cart/paid/' + username);
   }
 
-  getTotalPay(id: number): Observable<number> {
-    return this.http.get<number>(this.API_URL + '/cart/total-pay/' + id);
+  getTotalPay(username: string): Observable<ICartDto> {
+    return this.http.get<ICartDto>(this.API_URL + '/cart/total-pay/' + username);
   }
 }

@@ -1,2 +1,5 @@
-package com.example.waterbottle;public class Animal {
+package com.example.waterbottle;
+
+public class Animal {
+
 }

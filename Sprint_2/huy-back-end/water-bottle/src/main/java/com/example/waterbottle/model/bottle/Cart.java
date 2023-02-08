@@ -24,18 +24,29 @@ public class Cart {
 
     private boolean isDelete;
 
+    private boolean isPay;
+
 
     public Cart() {
     }
 
-    public Cart(Integer id, int quantity, String dateTime, Bottle bottle, Customer customer,
-                boolean isDelete) {
+    public Cart(Integer id, int quantity, String dateTime,
+                Bottle bottle, Customer customer, boolean isDelete, boolean isPay) {
         this.id = id;
         this.quantity = quantity;
         this.dateTime = dateTime;
         this.bottle = bottle;
         this.customer = customer;
         this.isDelete = isDelete;
+        this.isPay = isPay;
+    }
+
+    public boolean isPay() {
+        return isPay;
+    }
+
+    public void setPay(boolean pay) {
+        isPay = pay;
     }
 
     public int getQuantity() {

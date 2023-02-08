@@ -37,9 +37,21 @@ export class BottleService {
     return this.http.get<BottleDto>(this.API_URL + '/bottle/detail/' + id);
   }
 
-  addToCart(quantity: number, customerId: number, bottleId: number): Observable<void> {
-    console.log(this.API_URL + '/cart/add/' + quantity + '&' + customerId + '&' + bottleId);
-    return this.http.get<void>(this.API_URL + '/cart/add/' + quantity + '&' + customerId + '&' + bottleId);
+  addToCart(quantity: number, username: string, bottleId: number): Observable<void> {
+    console.log(this.API_URL + '/cart/add/' + quantity + '&' + username + '&' + bottleId);
+    return this.http.get<void>(this.API_URL + '/cart/add/' + quantity + '&' + username + '&' + bottleId);
+  }
+
+  getById(id: number): Observable<IBottle> {
+    return this.http.get<IBottle>(this.API_URL + '/bottle/' + id);
+  }
+
+  updateBottle(bottle: IBottle): Observable<IBottle> {
+    return this.http.patch<IBottle>(this.API_URL + '/bottle/edit/' + bottle.id, bottle);
+  }
+
+  deleteBottle(id: number): Observable<void> {
+    return this.http.delete<void>(this.API_URL + '/bottle/delete/' + id);
   }
 
 

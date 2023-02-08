@@ -12,6 +12,7 @@ import org.springframework.data.repository.query.Param;
 
 import javax.transaction.Transactional;
 import java.util.Optional;
+
 @Transactional
 public interface IBottleRepository extends JpaRepository<Bottle, Integer> {
 
@@ -53,7 +54,7 @@ public interface IBottleRepository extends JpaRepository<Bottle, Integer> {
             " left join material m on m.id = b.material_id where b.id =:id and b.is_delete = 0 ", nativeQuery = true)
     Optional<IBottleDto> bottleDetail(@Param("id") Integer id);
 
-
-
-
+    @Modifying
+    @Query(value = "update bottle set is_delete = 1 where id = :id", nativeQuery = true)
+    void deleteBottle(@Param("id") Integer id);
 }

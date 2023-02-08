@@ -1,6 +1,7 @@
 package com.example.waterbottle.service.bottle;
 
 import com.example.waterbottle.dto.bottle.ICartDto;
+import com.example.waterbottle.dto.bottle.IToatalPayDto;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
@@ -19,7 +20,7 @@ public interface ICartService {
 
     void deleteCart(Integer id);
 
-    Integer getTotalPay(Integer id);
+    IToatalPayDto getTotalPay(Integer id);
 
 }
 
